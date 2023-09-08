@@ -10,7 +10,9 @@ const dirs = xdg({
     subdir: 'VVVVVV-launcher'
 });
 
-let baseDir = path.join(dirs.data, "VVVVVV/levels");
+const vvvvvvdirs = xdg("VVVVVV");
+
+let baseDir = path.join(vvvvvvdirs.data, "levels");
 
 if (os.platform() === "win32")
 {
