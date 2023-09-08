@@ -56,7 +56,7 @@ if (arguments.length > 0)
     if (!hasConfig)
     {
         console.log("Config file not found, exiting...");
-        process.exit(1);
+        return;
     }
 
     console.log("Arguments: ", arguments);
@@ -66,7 +66,7 @@ if (arguments.length > 0)
     if (!arguments[0].startsWith("vvvvvv://"))
     {
         console.log("Invalid URL");
-        process.exit(1);
+        return;
     }
 
     // remove the vvvvvv://
@@ -106,6 +106,7 @@ if (arguments.length > 0)
             // run the executable
             console.log("Launching VVVVVV");
             const levelname = filename.split(".")[0];
+            console.log(`Running the following: "${executablePath}" -p "${levelname}"`)
             exec(`"${executablePath}" -p "${levelname}"`, (error, stdout, stderr) => {
                 if (error) {
                     console.log(`error: ${error.message}`);
