@@ -10,7 +10,9 @@ const dirs = xdg({
     subdir: 'VVVVVV-launcher'
 });
 
-const vvvvvvdirs = xdg("VVVVVV");
+const vvvvvvdirs = xdg({
+    subdir: "VVVVVV"
+});
 
 let baseDir = path.join(vvvvvvdirs.data, "levels");
 
