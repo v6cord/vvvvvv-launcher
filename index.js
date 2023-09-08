@@ -120,7 +120,8 @@ if (arguments.length > 0)
             });
         });
     }).on('error', function(err) { // Handle errors
-        fs.unlink(dest); // Delete the file async. (But we don't check the result)
+        fs.unlinkSync(dest); // Delete the file async. (But we don't check the result)
+        console.log(err.message);
     });
 }
 else
