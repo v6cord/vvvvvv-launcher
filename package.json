@@ -1,0 +1,28 @@
+{
+  "name": "comms-relay",
+  "version": "1.0.0",
+  "description": "VVVVVV Launcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NyakoFox",
+  "license": "ISC",
+  "dependencies": {
+    "@folder/xdg": "^4.0.1",
+    "follow-redirects": "^1.15.2",
+    "protocol-registry": "^1.4.1"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ],
+    "targets": [
+      "node18-linux-x64",
+      "node18-macos-x64",
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
